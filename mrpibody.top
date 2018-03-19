@@ -1,0 +1,9 @@
+
+TOPIC: ~electronics keep repeat []
+
+t: OPTION () what do you prefer for entertainment, laptop or tablet?
+    u:  (_[tablets tablet laptops laptop]) Really, I like them to.
+        $choise = _0
+        Whay do you prefer $choise?
+t: (![tablets tablet laptops laptop]) Not sure what you mean. ^reuse ( OPTION )
+t: You know I think $choise is really usefull thing. Do you play a lot of games on $choise ?

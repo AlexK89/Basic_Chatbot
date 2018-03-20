@@ -1,9 +1,20 @@
 
 TOPIC: ~electronics keep repeat []
-
+#! :build mrpibody
 t: OPTION () what do you prefer for entertainment, laptop or tablet?
-    u:  (_[tablets tablet laptops laptop]) Really, I like it too.
-        $choise = _0
-    u: (!$choise) Not sure what you mean. ^reuse ( OPTION )
+    a:  (_[tablet laptop]) Really, I like it too.
+        $optionChoise = _0
+    a: (!$optionChoise) Not sure what you mean. ^reuse ( OPTION )
 
-t: You know I think $choise is really usefull thing. Do you play a lot of games on $choise ?
+t: () You know, I think $optionChoise is really usefull thing. Do you play a lot of games on $optionChoise ?
+
+    a: (_[~yes] _*) cool. I am also the gamer. I can snepd whole day playing games. And You?
+            $gamesYes = _0;
+    a: (~no _*) really?. A lot of people play games these days. I like games.
+t: ($gamesYes) What kind of games do you prefer?
+    a: () Cool. I like shotters, a lot of action etc.
+t: (!$gamesYes) Ok let's talk about your hobbies. What do you do on your spare time?
+    a: (_*) Cool. I like fishing. and _0 is also cool.
+        $hobby = _0
+t: ($hobby) why do you prefer $hobby?
+    a: () you know it is very important to have a hobby. I need to take a rest sometime.

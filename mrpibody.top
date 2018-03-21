@@ -8,13 +8,15 @@ t: OPTION () what do you prefer for entertainment, laptop or tablet?
 
 t: () You know, I think $optionChoise is really usefull thing. Do you play a lot of games on $optionChoise ?
 
-    a: (_[~yes] _*) cool. I am also the gamer. I can snepd whole day playing games. And You?
-            $gamesYes = _0;
+    a: (_[~yes] _*) cool. I am also the gamer. I can spend whole day playing games. And You?
+            $gamesYes = _0
     a: (~no _*) really?. A lot of people play games these days. I like games.
+
 t: ($gamesYes) What kind of games do you prefer?
     a: () Cool. I like shotters, a lot of action etc.
-t: (!$gamesYes) Ok let's talk about your hobbies. What do you do on your spare time?
-    a: (_*) Cool. I like fishing. and _0 is also cool.
+
+t: () Ok let's talk about your hobbies. What do you do on your spare time?
+    a: (_*) Cool. I like fishing. I think _0 is very important as a hobby.
         $hobby = _0
 t: ($hobby) why do you prefer $hobby?
     a: () you know it is very important to have a hobby. I need to take a rest sometime.

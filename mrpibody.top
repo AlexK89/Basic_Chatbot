@@ -27,6 +27,6 @@ t: VACATION () If you need to decide where you spend your next summer you choose
     a:  (_[seaside mountines]) I think _0 is a nice place to spend your vacation. Why do you like it?
         $vacationChoise = _0
     a: (!$vacationChoise) Not sure what you mean. ^reuse ( VACATION )
-t: ($vacationChoise=seaside) I like sun
+t: ($vacationChoise=seaside) I like sun. Ok do not sit here go out and unwind:)
 
-t: ($vacationChoise=mountines) I like hiking
+t: ($vacationChoise=mountines) I like hiking. Ok do not sit here go out and unwind:)

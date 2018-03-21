@@ -19,4 +19,14 @@ t: () Ok let's talk about your hobbies. What do you do on your spare time?
     a: (_*) Cool. I like fishing. I think _0 is very important as a hobby.
         $hobby = _0
 t: ($hobby) why do you prefer $hobby?
-    a: () you know it is very important to have a hobby. I need to take a rest sometime.
+    a: () you know it is very important to have a hobby.
+t: () Do you spend enough time for your hobby?
+    a: (_[~yes] _*) that is great. You need to take a rest sometime to be productive.
+    a: (~no _*) You need to have some time when your brain can relax.
+t: VACATION () If you need to decide where you spend your next summer you choose seaside or mountines?
+    a:  (_[seaside mountines]) I think _0 is a nice place to spend your vacation. Why do you like it?
+        $vacationChoise = _0
+    a: (!$vacationChoise) Not sure what you mean. ^reuse ( VACATION )
+t: ($vacationChoise=seaside) I like sun
+
+t: ($vacationChoise=mountines) I like hiking
